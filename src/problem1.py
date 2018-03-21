@@ -2,8 +2,8 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and JD Medlin.  March 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   product_of_digits   function below.
+# DONE: 2.  READ the doc-string for the   product_of_digits   function below.
 #           Ask your instructor for help if you do not understand it.
 #
 #   Once you are confident that you understand the doc-string
@@ -196,7 +196,7 @@ def problem1a(a, b, threshold):
               returns 109 + 110 + 111 + 112 + 120 + 121 + 130,  which is 813
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # IMPORTANT NOTE
@@ -204,6 +204,13 @@ def problem1a(a, b, threshold):
     #     arguments, don't do that.  You are only allowed to use the
     #     1-argument version of the RANGE statement to solve this problem.
     # -------------------------------------------------------------------------
+    z = 0
+    c = b - a
+    for k in range(c + 1):
+        x = product_of_digits(a + k)
+        if x < threshold:
+            z = z + (a + k)
+    return z
 
 
 def run_test_problem1b():
@@ -218,6 +225,33 @@ def run_test_problem1b():
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
 
+    expected = 682
+    answer = problem1b(8)
+    print()
+    print('Test 1 is: problem1b(8)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected = 3
+    answer = problem1b(3)
+    print()
+    print('Test 1 is: problem1b(3)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected = 375
+    answer = problem1b(7)
+    print()
+    print('Test 1 is: problem1b(7)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected = 64
+    answer = problem1b(4)
+    print()
+    print('Test 1 is: problem1b(4)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
 
 ###############################################################################
 # IMPORTANT note: in the following problem,
@@ -242,6 +276,14 @@ def problem1b(r):
     # TODO: 5. Implement and test this function.
     #          See the IMPORTANT NOTE just before the DEF above.
     # -------------------------------------------------------------------------
+
+    z = 0
+    f = r**2 - r
+    for k in range(f + 1):
+        x = product_of_digits(r + k)
+        if x <= r:
+            z = z + r + k
+    return z
 
 
 # -----------------------------------------------------------------------------
