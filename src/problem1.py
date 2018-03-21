@@ -216,7 +216,7 @@ def problem1a(a, b, threshold):
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement at least 4 tests of the problem1b function.
+    # DONE: 4. Implement at least 4 tests of the problem1b function.
     #   Note that you CANNOT use  problem1b(1)  or  problem1b(2)  as tests, per
     #   the specification below that says that the argument must be at least 3.
     # -------------------------------------------------------------------------
@@ -259,6 +259,8 @@ def run_test_problem1b():
 #    **  the appropriate functions that are defined above,
 #    **  possibly including ones you have written.
 ###############################################################################
+
+
 def problem1b(r):
     """
     What comes in:  An integer r that is at least 3.
@@ -273,17 +275,19 @@ def problem1b(r):
            and the sum of the above numbers is 682
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          See the IMPORTANT NOTE just before the DEF above.
     # -------------------------------------------------------------------------
 
-    z = 0
-    f = r**2 - r
-    for k in range(f + 1):
-        x = product_of_digits(r + k)
-        if x <= r:
-            z = z + r + k
-    return z
+    # z = 0
+    # f = r ** 2 - r
+    # for k in range(f + 1):
+    #     x = product_of_digits(r + k)
+    #     if x <= r:
+    #         z = z + r + k
+    # return z
+
+    return problem1a(r, r ** 2, r + 1)
 
 
 # -----------------------------------------------------------------------------
