@@ -143,6 +143,7 @@ def problem4(m):
         if m % (k + 1) == 0:
             count = count + 1
     return count - 2
+        # I assumed that every test has both trivial factors of 1 and m so I just subtracted 2 to account for that.
 
 
 # -----------------------------------------------------------------------------
