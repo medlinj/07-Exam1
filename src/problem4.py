@@ -114,7 +114,7 @@ def run_test_problem4():
 def problem4(m):
     """
     What comes in:  Positive integer m.
-    What goes out:  Returns the number of non-trival FACTORS of m, where:
+    What goes out:  Returns the number of non-trivial FACTORS of m, where:
       -- a FACTOR of m is a positive integer that divides evenly into m
       -- the TRIVIAL factors of m are 1 and m, and the NON-TRIVIAL factors
            of m are all the factors EXCEPT the trivial ones.
@@ -135,15 +135,16 @@ def problem4(m):
                                  (i.e., it is prime)
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
     count = 0
     for k in range(m):
         if m % (k + 1) == 0:
             count = count + 1
     return count - 2
-        # I assumed that every test has both trivial factors of 1 and m so I just subtracted 2 to account for that.
+    # I assumed that every test has both trivial factors of 1 and m so I just subtracted 2 to account for that.
 
 
 # -----------------------------------------------------------------------------
