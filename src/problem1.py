@@ -3,7 +3,7 @@ Exam 1, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
          their colleagues and JD Medlin.  March 2018.
-"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.  
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.     
 
 
 def main():
